@@ -49,4 +49,11 @@ public class OrdenCompraQuispeYhon {
 
 	@Column(name = "estado", columnDefinition = "char(1)", length = 1)
 	private String estado;
+
+	public String getEstadoDescripcion() {
+		if ("P".equals(estado)) return "Pendiente";
+		if ("C".equals(estado)) return "Completado";
+		if ("A".equals(estado)) return "Anulado";
+		return "";
+	}
 }
